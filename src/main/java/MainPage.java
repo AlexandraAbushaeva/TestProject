@@ -22,7 +22,6 @@ public class MainPage {
         if (!link.isDisplayed()) {
             text = url();
             System.out.println("Страница без ссылки: № " + regular(text));
-            open(url + pageNumber + ".html");
 
         } else {
             linkText = link.getAttribute("href");
@@ -30,10 +29,10 @@ public class MainPage {
             if (redirectPage != pageNumber) {
                    System.out.println("Неверная ссылка на странице № " + regular(text));
                  }
-                open(url + pageNumber + ".html");
-            }
+        }
+        open(url + pageNumber + ".html");
 
-            return this;
+        return this;
         }
 
 
